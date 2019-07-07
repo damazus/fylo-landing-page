@@ -1,0 +1,116 @@
+// breakpoints
+$S:     576px;
+$M:     768px;
+$L:     1024px;
+$XL:    1200px;
+$XXL:    1440px;
+
+// media queries
+@mixin MQ($canvas) {
+  @if $canvas == S {
+    @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+    @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+    @media only screen and (min-width: $L) { @content; }
+  }
+  @else if $canvas == XL {
+    @media only screen and (min-width: $XL) { @content; }
+  }
+  @else if $canvas == XXL {
+    @media only screen and (min-width: $XXL) { @content; }
+  }
+  @else {
+    @media only screen and (min-width: $canvas) { @content; }
+  }
+}
+
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+// border radius
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+// antialiasing mode font rendering
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include MQ(M){
+    flex-direction: row;
+  }
+
+  @include MQ(XL){
+    width: 1200px;
+  }
+}
+
+@mixin row($gutter: 15px){
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+@mixin col($gutter: 15px){
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+@mixin img-fluid{
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin resetBtn{
+  box-shadow: none;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+@mixin btn-primary{
+  @include resetBtn;
+  font-family: "Raleway";
+  font-weight: 700;
+  padding: 16px 50px;
+  border-radius: 50em;
+  cursor: pointer;
+  color: #FFF;
+  background: linear-gradient(to right, $color_cyan, $color_blue);
+
+  &:hover{
+    background: linear-gradient(to right, $color_blue, $color_cyan);
+  }
+}

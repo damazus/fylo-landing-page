@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+a,
+a:active,
+a:visited,
+a:hover,
+a:focus{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body{
+  font-size: 14px;
+  font-family: "Open Sans";
+}
+
+p{
+  line-height: 20px;
+}
+
+html.sr .load-hidden {
+  visibility: hidden;
+}
