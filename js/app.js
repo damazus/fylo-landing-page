@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     sr.reveal('.service-item--left', {
-        duration: 600,
+        duration: 1000,
         distance: '40px',
         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
         origin: 'top',
