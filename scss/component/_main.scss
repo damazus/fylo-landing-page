@@ -2,7 +2,7 @@
 .l-title{
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 30px;
 
   @include MQ(L){
@@ -27,13 +27,14 @@
 .hero{
   padding: 25px 0;
   background-color: $color_intro;
-  background-image: url("../images/bg-curvy-desktop.svg");
+  background-image: url("../images/bg-curvy-mobile.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
 
   @include MQ(M){
-    padding: 70px 0;
+    padding: 70px 0 0;
+    background-image: url("../images/bg-curvy-desktop.svg");
   }
 }
 
@@ -45,8 +46,12 @@
   flex-direction: column;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px;
   color: $color_white;
+
+  @include MQ(M){
+    padding: 0 15px 170px;
+  }
 }
 
 .hero__picture{
@@ -87,7 +92,7 @@
 // feature
 .feature-section{
   position: relative;
-  padding: 40px 0 20px;
+  padding: 20px 0;
 }
 
 .feature-item{

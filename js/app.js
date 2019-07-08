@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // reveal
     const sr = ScrollReveal()
     sr.reveal('.hero__picture, .hero__title, .hero__description, .hero-btn', {
         delay: 150,
@@ -47,5 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
         origin: 'bottom',
         interval: 150
+    })
+
+    // header
+    document.querySelector('#header__trigger').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector('#header').classList.toggle('header--mobile')
     })
 })

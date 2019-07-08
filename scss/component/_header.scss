@@ -10,30 +10,18 @@
   height: $header_height;
   background: $color_intro;
 
-  &.header--sticky{
-    position: fixed;
-    top: 0;
-    animation: header-in .3s;
-    box-shadow: 0 3px 10px rgba($color_intro, 0.5);
-  }
-
   @include MQ(L){
     padding: 0 40px;
   }
 }
 
 .header__brand{
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   transition: transform .25s;
 
   .header--mobile & {
     position: relative;
     z-index: 1003;
-    color: #FFF;
-    transform: scale(1.2) translateX(15px);
+    //transform: scale(1.2) translateX(15px);
   }
 }
 
@@ -48,6 +36,7 @@
   right: 0;
   bottom: 0;
   width: 100%;
+  background: $color_intro;
   transform: translateX(300px);
   opacity: 0;
   visibility: hidden;
@@ -124,7 +113,7 @@
 
   .header--mobile & {
     span{
-      background: $color_white;
+      background: transparent;
       box-shadow: none;
     }
 
@@ -158,8 +147,9 @@
   display: flex;
   align-items: center;
   height: 50px;
-  color: #FFF;
   padding: 0 10px;
+  color: #FFF;
+
 
   &.is-active{
     color: $color_white;

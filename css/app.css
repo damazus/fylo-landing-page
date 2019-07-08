@@ -58,9 +58,13 @@ a:focus {
   cursor: pointer;
   text-decoration: none; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-size: 14px;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  overflow-x: hidden; }
 
 p {
   line-height: 20px; }
@@ -78,26 +82,15 @@ html.sr .load-hidden {
   width: 100%;
   height: 100px;
   background: #1c2431; }
-  .header.header--sticky {
-    position: fixed;
-    top: 0;
-    animation: header-in .3s;
-    box-shadow: 0 3px 10px rgba(28, 36, 49, 0.5); }
   @media only screen and (min-width: 1024px) {
     .header {
       padding: 0 40px; } }
 
 .header__brand {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   transition: transform .25s; }
   .header--mobile .header__brand {
     position: relative;
-    z-index: 1003;
-    color: #FFF;
-    transform: scale(1.2) translateX(15px); }
+    z-index: 1003; }
 
 .header-menu {
   display: flex;
@@ -110,6 +103,7 @@ html.sr .load-hidden {
   right: 0;
   bottom: 0;
   width: 100%;
+  background: #1c2431;
   transform: translateX(300px);
   opacity: 0;
   visibility: hidden;
@@ -167,7 +161,7 @@ html.sr .load-hidden {
   .header__trigger:hover span:after {
     width: 22px; }
   .header--mobile .header__trigger span {
-    background: #FFF;
+    background: transparent;
     box-shadow: none; }
   .header--mobile .header__trigger span:before,
   .header--mobile .header__trigger span:after {
@@ -192,8 +186,8 @@ html.sr .load-hidden {
   display: flex;
   align-items: center;
   height: 50px;
-  color: #FFF;
-  padding: 0 10px; }
+  padding: 0 10px;
+  color: #FFF; }
   .header-menu-link.is-active {
     color: #FFF; }
   @media only screen and (min-width: 768px) {
@@ -208,7 +202,7 @@ html.sr .load-hidden {
 .l-title {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 30px; }
   @media only screen and (min-width: 1024px) {
     .l-title {
@@ -242,13 +236,14 @@ html.sr .load-hidden {
 .hero {
   padding: 25px 0;
   background-color: #1c2431;
-  background-image: url("../images/bg-curvy-desktop.svg");
+  background-image: url("../images/bg-curvy-mobile.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain; }
   @media only screen and (min-width: 768px) {
     .hero {
-      padding: 70px 0; } }
+      padding: 70px 0 0;
+      background-image: url("../images/bg-curvy-desktop.svg"); } }
 
 .hero__inner {
   position: relative;
@@ -258,8 +253,11 @@ html.sr .load-hidden {
   flex-direction: column;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px;
   color: #FFF; }
+  @media only screen and (min-width: 768px) {
+    .hero__inner {
+      padding: 0 15px 170px; } }
 
 .hero__picture {
   display: block;
@@ -302,7 +300,7 @@ html.sr .load-hidden {
 
 .feature-section {
   position: relative;
-  padding: 40px 0 20px; }
+  padding: 20px 0; }
 
 .feature-item {
   padding-left: 15px;

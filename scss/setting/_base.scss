@@ -13,9 +13,14 @@ a:focus{
   text-decoration: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-size: 14px;
   font-family: "Open Sans";
+  overflow-x: hidden;
 }
 
 p{
