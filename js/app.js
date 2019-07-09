@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         interval: 100,
     })
 
-    sr.reveal('.contact', {
+    /*sr.reveal('.contact', {
         duration: 500,
         distance: '40px',
         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
         origin: 'bottom',
         interval: 150
-    })
+    })*/
 
     // header
     document.querySelector('#header__trigger').addEventListener('click', function (e) {
