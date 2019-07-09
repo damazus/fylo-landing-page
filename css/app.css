@@ -285,6 +285,7 @@ html.sr .load-hidden {
   border: none;
   background: none;
   padding: 0;
+  cursor: pointer;
   font-family: "Raleway";
   font-weight: 700;
   padding: 16px 50px;
@@ -380,6 +381,7 @@ html.sr .load-hidden {
   border: none;
   background: none;
   padding: 0;
+  cursor: pointer;
   display: flex;
   align-items: center;
   font-family: "Raleway";
@@ -387,10 +389,17 @@ html.sr .load-hidden {
   color: #65e2d9;
   padding-bottom: 4px;
   margin-top: 5px;
-  border-bottom: 1px solid #65e2d9; }
+  border-bottom: 1px solid #65e2d9;
+  transition: border-bottom-color .2s; }
+  .service-item-btn:hover {
+    color: #24bcb2;
+    border-bottom-color: transparent; }
+    .service-item-btn:hover .service-item-btn__icon {
+      transform: translateX(5px); }
 
 .service-item-btn__icon {
-  margin-left: 8px; }
+  margin-left: 8px;
+  transition: transform .2s; }
 
 .testimonial-section {
   padding: 100px 0 300px; }
@@ -541,6 +550,7 @@ html.sr .load-hidden {
   border: none;
   background: none;
   padding: 0;
+  cursor: pointer;
   font-family: "Raleway";
   font-weight: 700;
   padding: 16px 50px;

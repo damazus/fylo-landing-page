@@ -199,10 +199,21 @@
   padding-bottom: 4px;
   margin-top: 5px;
   border-bottom: 1px solid $color_cyan;
+  transition: border-bottom-color .2s;
+
+  &:hover{
+    color: darken($color_cyan, 20%);
+    border-bottom-color: transparent;
+
+    .service-item-btn__icon{
+      transform: translateX(5px);
+    }
+  }
 }
 
 .service-item-btn__icon{
   margin-left: 8px;
+  transition: transform .2s;
 }
 
 // testimonial
