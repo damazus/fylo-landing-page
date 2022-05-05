@@ -1,16 +1,26 @@
 {
   "name": "fylo-landing-page",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "![Design preview for the Fylo landing page with dark theme and features grid challenge](./design/desktop-preview.jpg)",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damazus/fylo-landing-page.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damazus/fylo-landing-page/issues"
+  },
+  "homepage": "https://github.com/damazus/fylo-landing-page#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "gulp": "^4.0.1",
-    "gulp-sass": "^4.0.2"
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.51.0"
   }
 }
